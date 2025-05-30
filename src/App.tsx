@@ -12,12 +12,10 @@ const App = () => {
       <GridItem area='nav'>
         <NavBar />
       </GridItem>
-      <GridItem area='aside' bg='gold' hideBelow='md'>
+      <GridItem area='aside' hideBelow='md'>
         Aside
       </GridItem>
-      <GridItem area='main' bg='dodgerblue'>
-        Main
-      </GridItem>
+      <GridItem area='main'>Main</GridItem>
     </Grid>
   )
 }
