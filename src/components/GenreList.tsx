@@ -16,10 +16,15 @@ const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
         Genres
       </Heading>
       <List.Root variant='plain'>
-        {data.map(genre => (
+        {data?.results.map(genre => (
           <List.Item key={genre.id} paddingY='5px'>
             <HStack>
-              <Image src={getCroppedImageURL(genre.image_background)} boxSize='32px' borderRadius={8} objectFit='cover' />
+              <Image
+                src={getCroppedImageURL(genre.image_background)}
+                boxSize='32px'
+                borderRadius={8}
+                objectFit='cover'
+              />
               <Link
                 fontSize='lg'
                 fontWeight={genre.id === selectedGenre?.id ? 'bold' : 'normal'}

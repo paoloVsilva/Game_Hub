@@ -25,8 +25,12 @@ const PlatformSelector = ({ onSelectPlatform, selectedPlatform }: Props) => {
         <Menu.Positioner>
           <Menu.Content>
             {isLoading && <Spinner />}
-            {data.map(platform => (
-              <Menu.Item key={platform.id} value={platform.name} onClick={() => onSelectPlatform(platform)}>
+            {data?.results.map(platform => (
+              <Menu.Item
+                key={platform.id}
+                value={platform.name}
+                onClick={() => onSelectPlatform(platform)}
+              >
                 {platform.name}
               </Menu.Item>
             ))}
