@@ -29,7 +29,9 @@ const useGames = (gameQuery: GameQuery) =>
     initialPageParam: 1,
 
     getNextPageParam: (lastPage, allPages) =>
-      lastPage.next ? allPages.length + 1 : undefined
+      lastPage.next ? allPages.length + 1 : undefined,
+
+    staleTime: 24 * 60 * 60 * 1000 // 24 hours
   })
 
 export default useGames
