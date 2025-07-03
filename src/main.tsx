@@ -3,7 +3,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { Provider } from './components/ui/provider'
 import { RouterProvider } from 'react-router-dom'
-import router from './route'
+import router from './routes'
 
 const queryClient = new QueryClient()
 

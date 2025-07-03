@@ -5,8 +5,10 @@ import type { Platform } from './usePlatforms'
 import useGameQueryStore from '../store'
 
 export interface Game {
+  description_raw: string
   id: number
   name: string
+  slug: string
   background_image: string
   parent_platforms: { platform: Platform }[]
   metacritic: number
